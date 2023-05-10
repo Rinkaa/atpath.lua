@@ -5,11 +5,11 @@ Access values deep inside modules and tables, using path strings.
 ## API
 
 ### v = atpath.at(t, path)
-Use a relative path "<key1>/<key2>/.../<keyN>" look for the value in the table at the path.
+Use a relative path `"<key1/<key2>/.../<keyN>"` look for the value in the table at the path.
 e.g. when t is `t` and path is "a/b/c", it means looking for `t.a.b.c`.
 
 ### v = atpath.at_module(path)
-Use an absolute path "/<modulename>/<key1>/<key2>/.../<keyN>", to search for a module and then look for the value at the path.
+Use an absolute path `"/<modulename>/<key1>/<key2>/.../<keyN>"`, to search for a module and then look for the value at the path.
 e.g. when path is "/30log/new", it means looking for `require("30log").new`.
 Note there is a slash at the beginning; this slash is not omittable.
 
